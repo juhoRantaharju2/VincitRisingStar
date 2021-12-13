@@ -1,0 +1,12 @@
+Get the market data from /coins/{id}/market_chart/range
+
+
+use this page info to make it a chart https://www.educative.io/edpresso/how-to-use-chartjs-to-create-charts-in-react
+
+Get as data from user a range of dates to use.
+
+Maybe use array to store information from all dates. 
+
+Make a data set of recieved data. Cut the array from where down or up trends starts and when it turns. Return info form this array in a graph.
+
+Calculate the best day to buy bitcoin in date range. This should practically be the lowest point in bitcoin and max point for selling it.
