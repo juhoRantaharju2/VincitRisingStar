@@ -19,3 +19,6 @@ function logi() {
   //console.log(response);
 
 }
+
+//This is for a unix timestamp that needs to be send
+let ts = Math.round((new Date()).getTime() / 1000);
