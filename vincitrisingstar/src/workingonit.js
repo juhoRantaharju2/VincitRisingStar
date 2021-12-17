@@ -36,3 +36,69 @@ let ts = Math.round((new Date()).getTime() / 1000);
   longest down
 </button>
 */
+
+
+//newer code here
+
+const submitButton = document.getElementById("submit");
+submitButton.addEventListener("click", logi);
+const start = document.getElementById("start");
+let startDate = new Date();
+
+const url = "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=usd&from=1392577232&to=1422577232";
+
+async function getData(url){
+
+ const response = await fetch(url);
+ let data = await response.json();
+ console.log(data);
+
+}
+
+getData(url);
+
+function logi() {
+
+	console.log("text");
+  //console.log(response);
+  console.log(start.value);
+  startDate = start.value;
+  console.log(startDate);
+  
+  let ts = startDate.getMilliseconds();
+  console.log(ts);
+
+}
+
+
+//more new stuff
+
+const submitButton = document.getElementById("submit");
+submitButton.addEventListener("click", logi);
+const start = document.getElementById("start");
+
+const url = "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=usd&from=1392577232&to=1422577232";
+
+async function getData(url){
+
+ const response = await fetch(url);
+ let data = await response.json();
+ console.log(data);
+
+}
+
+getData(url);
+
+function logi() {
+
+	let startDate = new Date(start);
+
+	console.log("text");
+  //console.log(response);
+  console.log(start.value);
+  startDate = start.value;
+  console.log(startDate.getMonth());
+  
+  //console.log(startDate.getMilliseconds());
+
+}
