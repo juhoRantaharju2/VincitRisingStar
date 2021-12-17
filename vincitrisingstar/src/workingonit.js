@@ -132,3 +132,100 @@ function logi() {
   //console.log(startDate.getMilliseconds());
 
 }
+
+//version with unix timestamp
+
+const submitButton = document.getElementById("submit");
+submitButton.addEventListener("click", logi);
+const start = document.getElementById("start");
+const end = document.getElementById("end");
+
+const url = "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=usd&from=1392577232&to=1422577232";
+
+async function getData(url){
+
+ const response = await fetch(url);
+ let data = await response.json();
+ console.log(data);
+
+}
+
+getData(url);
+
+function logi() {
+
+	let startDate = new Date(start.value);
+  let endDate = new Date(end.value);
+
+	console.log("text");
+  //console.log(response);
+  console.log(start.value);
+  //startDate = start.value;
+  console.log(startDate.getDate());
+  console.log(endDate.getDate());
+  
+  let ts = Math.round(startDate.getTime() / 1000); 
+  let tt = Math.round(endDate.getTime() / 1000);
+  
+  console.log(ts);
+  console.log(tt);
+  
+  //console.log(startDate.getMilliseconds());
+
+}
+
+//working version that gets data within date range
+
+const submitButton = document.getElementById("submit");
+submitButton.addEventListener("click", logi);
+const start = document.getElementById("start");
+const end = document.getElementById("end");
+
+const url = "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=usd&from=1392577232&to=1422577232";
+
+async function getData(url){
+
+ const response = await fetch(url);
+ let data = await response.json();
+ console.log(data);
+
+}
+
+getData(url);
+
+function logi() {
+
+	let startDate = new Date(start.value);
+  let endDate = new Date(end.value);
+
+	console.log("text");
+  //console.log(response);
+  console.log(start.value);
+  //startDate = start.value;
+  console.log(startDate.getDate());
+  console.log(endDate.getDate());
+  
+  let ts = Math.round(startDate.getTime() / 1000); 
+  let tt = Math.round(endDate.getTime() / 1000);
+  
+  console.log(ts);
+  console.log(tt);
+  
+  let url2 =   "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=usd" + "&from=" + ts + "&to=" + tt;  
+  
+  getData(url2);
+  
+  //console.log(startDate.getMilliseconds());
+
+}
+/*
+<label>Start date:</label>
+<input type="date" id="start" value="">
+<br />
+<label>End date:</label>
+<input type="date" id="end" value="">
+<br />
+
+<button id="submit" >
+  longest down
+</button>*/
