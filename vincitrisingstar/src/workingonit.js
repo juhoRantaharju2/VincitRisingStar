@@ -237,3 +237,15 @@ let graphs = new Chart(mychart, {
   data: {da},
   options: {}
 });
+/*
+make an array  if the next part is down than add the previous to array until the next one is bigger then last onabort
+
+like list price -1 > price now add to array. until price -1 < price now
+
+make multiple arrays like this and compare length of the arrays. Print the longest array in a graph for down 
+
+the other way for up. 
+
+For the 3 assignment get lowest price of given range and highest price. Print out the date for the lowest price as go there for a time machine to buy and highest time to sell
+
+*/
