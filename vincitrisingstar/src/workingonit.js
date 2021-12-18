@@ -248,4 +248,6 @@ the other way for up.
 
 For the 3 assignment get lowest price of given range and highest price. Print out the date for the lowest price as go there for a time machine to buy and highest time to sell
 
+Time stamp backwards to usw dates as label
+
 */
