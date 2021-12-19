@@ -251,3 +251,25 @@ For the 3 assignment get lowest price of given range and highest price. Print ou
 Time stamp backwards to usw dates as label
 
 */
+
+/*Maybe this could be a way to deal with the arrays*/
+
+//Going through those loops
+
+array.forEach(element => {
+  
+});
+
+//After this maybe use if and while to create an array of the longest down spiral in data
+
+Array ar = new Array[][];
+
+Array previous index = index -1;
+
+while(array[] < arr[])
+  array[index] = arr[];
+if(array[previous index] > Arr[index])
+break;
+
+//also use a condition to check arrays for how long they are compared to each other.
+
