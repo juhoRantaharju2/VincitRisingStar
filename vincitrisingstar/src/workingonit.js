@@ -273,3 +273,39 @@ break;
 
 //also use a condition to check arrays for how long they are compared to each other.
 
+//More ideas to find the longest down and up
+
+function streak(arr) {
+  var i,
+      temp,
+      streak,
+      length = arr.length,
+      highestStreak = 0;
+
+  for(i = 0; i < length; i++) {
+      // check the value of the current entry against the last
+      if(temp != '' && temp == arr[i]) {
+          // it's a match
+          streak++;
+      } else {
+          // it's not a match, start streak from 1
+          streak = 1;
+      }
+
+      // set current letter for next time
+      temp = arr[i];
+
+      // set the master streak var
+      if(streak > highestStreak) {
+          highestStreak = streak;
+      }
+  }
+
+  return highestStreak;
+}
+
+var array = [2,5,3,1,1,1,3,7,9,6,4,1,1,1,1,1,4,7,2,3,1,1,4,3];
+
+console.log(streak(array)); // 5
+
+
