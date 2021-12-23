@@ -309,3 +309,10 @@ var array = [2,5,3,1,1,1,3,7,9,6,4,1,1,1,1,1,4,7,2,3,1,1,4,3];
 console.log(streak(array)); // 5
 
 
+//This loop runs through all the prices
+for (let i = 1; i < data.prices.length; i++) 
+console.log(data.prices[i][1]);
+
+//should try for each also
+
+
